@@ -10,17 +10,36 @@ public class triangle{
     v3 = p3;
   }
 
-
-
-  public void printTriangle(){
-    System.out.println("v1: ("+v1.getX()+", "+v1.getY()+")");
-    System.out.println("v2: ("+v2.getX()+", "+v2.getY()+")");
-    System.out.println("v3: ("+v3.getX()+", "+v3.getY()+")");
+  public triangle(double v1x, double v1y,
+  double v2x, double v2y, double v3x, double v3y){
+    v1 = new Point(v1x, v1y);
+    v2 = new Point(v2x, v2y);
+    v3 = new Point(v3x, v3y);
   }
 
+  public String toString(){
+    return "Triangle: A("+v1.getX()+", "+v1.getY()+") B("+v2.getX()+", "+v2.getY()+") C("+v3.getX()+", "+v3.getY()+")";
+  }
 
+  public Point getVertex(int idx){
+    Point output;
+    if (idx == 0){
+      output = new Point(v1.getX(), v1.getY());
+    }
+    else if (idx == 1){
+      output = new Point(v2.getX(), v2.getY());
+    }
+    else{
+      output = new Point(v3.getX(), v3.getY());
+    }
+    return output;
+  }
 
-  public double perimeter(){
+  public void setVertex(int index, Point newP){
+    this.getVertex(index) = newP;
+  }
+
+  public double getPerimeter(){
     return Point.distance(v1,v2)+Point.distance(v1,v3)+Point.distance(v2,v3);
   }
 
