@@ -12,8 +12,10 @@ public class demo{
 
     triangle t2 = new triangle(0.0, 0.0, 0.0, 5.0, 5.0, 5.0);
     System.out.println(t2.toString());
+    System.out.println(t2.getPerimeter());
     t2.setVertex(0, new Point(0.0, 1.0));
     System.out.println(t2.toString());
+    System.out.println(t2.getPerimeter());
   }
 
   public static double distance(Point first, Point second){

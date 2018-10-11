@@ -36,7 +36,15 @@ public class triangle{
   }
 
   public void setVertex(int index, Point newP){
-    this.getVertex(index) = newP;
+    if (index == 0){
+      v1 = newP;
+    }
+    else if (index == 1){
+      v2 = newP;
+    }
+    else{
+      v3 = newP;
+    }
   }
 
   public double getPerimeter(){
