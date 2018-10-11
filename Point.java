@@ -19,6 +19,10 @@ public class Point{
     return Math.sqrt(Math.pow((this.x - other.x),2) + Math.pow((this.y - other.y),2));
   }
 
+  public String toString(){
+    return "(" + x + ", " + y + ")";
+  }
+
   public static double distance(Point one, Point two){
     return Math.sqrt(Math.pow((one.getX()-two.getX()),2)+Math.pow((one.getY()-two.getY()),2));
   }
